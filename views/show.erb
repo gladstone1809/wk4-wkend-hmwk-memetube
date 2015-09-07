@@ -1,0 +1,12 @@
+<section class="lib">
+    <% @videos.each do | video | %>
+          <h3> <%= video['title'] %> </h3>
+          <iframe width="560" height="315" src="//www.youtube.com/embed/<%= video["youtube_id"] %>" frameborder="0" allowfullscreen></iframe>
+          <form action="/edit">
+          <input type="submit" value="Edit me">
+          </form>
+          <form action="/delete/<%= video["youtube_id"] %>">
+          <input type="submit" value="Delete me">
+          </form>
+    <% end %>
+</section>

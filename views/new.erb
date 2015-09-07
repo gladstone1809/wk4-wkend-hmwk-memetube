@@ -1,0 +1,17 @@
+<h2>Add New Video</h2>
+<% if @youtube_id %>
+<h2>You searched for <%= @title %> on with YouTube ID <%= @youtube_id %> </h2>
+<%  end %>
+
+<div class="new_video" >
+  <form action='/create' method 'get'>
+  <LABEL for="youtube_id">YouTube UID: </LABEL>
+  <input type= 'text' name= "youtube_id" autofocus>
+  <LABEL for="youtube_id">Title: </LABEL>
+  <input type= 'text' name= "title">
+  <LABEL for="youtube_id">Description: </LABEL>
+  <input type= 'text' name= "description">
+  <LABEL for="youtube_id">Genre: </LABEL>
+  <input type= 'text' name= "genre">
+  <button>Log Video</button>
+</div>
